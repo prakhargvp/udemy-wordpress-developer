@@ -13,3 +13,7 @@
 - the_post()
   - the_title()
   - the_content()
+- wp_get_post_parent_id()
+- get_the_ID()
+- get_the_permalink()
+- get_the_title()

@@ -28,7 +28,7 @@
             <nav class="nav-list">
               <ul>
                 <li><a href="#">Legal</a></li>
-                <li><a href="#">Privacy</a></li>
+                <li><a href="<?=site_url('privacy-policy')?>">Privacy</a></li>
                 <li><a href="#">Careers</a></li>
               </ul>
             </nav>
