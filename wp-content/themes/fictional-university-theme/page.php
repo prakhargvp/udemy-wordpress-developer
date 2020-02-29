@@ -14,19 +14,44 @@
 
   <div class="container container--narrow page-section">
 	<?php 
-	if($theParent = wp_get_post_parent_id(get_the_ID())) { ?>
+	$theParent = wp_get_post_parent_id(get_the_ID());
+	if($theParent) { ?>
     <div class="metabox metabox--position-up metabox--with-home-link">
       <p><a class="metabox__blog-home-link" href="<?=get_the_permalink($theParent)?>"><i class="fa fa-home" aria-hidden="true"></i> Back to <?=get_the_title($theParent)?></a> <span class="metabox__main"><?php the_title() ?></span></p>
     </div>
     <?php } ?>
 
-    <!-- <div class="page-links">
-      <h2 class="page-links__title"><a href="#">About Us</a></h2>
+	<!-- 
+		Show when child pages are available 
+		Show when parent page is available
+	-->
+	<?php 
+
+	$testArray = get_pages([
+		'child_of' => get_the_id()
+	]);
+
+	if($theParent or $testArray) {
+	?>
+    <div class="page-links">
+      <h2 class="page-links__title">
+      	<a href="<?=get_permalink($theParent)?>"><?=get_the_title($theParent)?></a>
+      </h2>
       <ul class="min-list">
-        <li class="current_page_item"><a href="#">Our History</a></li>
-        <li><a href="#">Our Goals</a></li>
+        <?php
+        if ( $theParent ) {
+        	$findChildrenOf = $theParent;
+        } else {
+        	$findChildrenOf = get_the_id();
+        }
+        wp_list_pages([
+        	'title_li' => NULL,
+        	'child_of' => $findChildrenOf
+        ]);
+        ?>
       </ul>
-    </div> -->
+    </div>
+	<?php } ?>
 
     <div class="generic-content">
      <?php the_content() ?>
