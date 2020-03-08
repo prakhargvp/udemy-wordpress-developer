@@ -24,10 +24,15 @@
       <?=get_the_category_list(', ')?>
     </div>
     <div class="generic-content">
-      <p><?=the_excerpt()?></p>
+      <?=the_excerpt()?>
+      <p><a class="btn btn--blue" href="<?=the_permalink()?>">
+        Continue reading &raquo;
+      </a></p>
+
     </div>
   </div>
   <?php endwhile;?>
+  <?=paginate_links()?>
 </div>
 
 

@@ -18,6 +18,7 @@
   - the_permalink()
   - the_author_posts_link()
   - get_the_category_list()
+  - paginate_links()
 - wp_get_post_parent_id()
 - get_the_ID()
 - get_the_permalink()
