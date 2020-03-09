@@ -27,5 +27,9 @@
 - get_the_ID()
 - get_the_permalink()
 - get_the_title()
+- get_post_type()
 - WP_Query
 - wp_reset_postdata()
+- is_home()
+- is_single()
+- is_archive()
