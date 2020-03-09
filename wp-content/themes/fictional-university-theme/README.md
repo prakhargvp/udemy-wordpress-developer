@@ -19,7 +19,13 @@
   - the_author_posts_link()
   - get_the_category_list()
   - paginate_links()
+  - the_time()
+- is_category()
+- is_author()
+- single_cat_title()
 - wp_get_post_parent_id()
 - get_the_ID()
 - get_the_permalink()
 - get_the_title()
+- WP_Query
+- wp_reset_postdata()
