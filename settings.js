@@ -1,5 +1,5 @@
 exports.themeLocation = './wp-content/themes/fictional-university-theme/';
-exports.urlToPreview = 'http://college.dev';
+exports.urlToPreview = 'http://college.local';
 
 // If you're using Local by Flywheel you will
 // want your settings to be similar to the examples below:
