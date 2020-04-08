@@ -20,6 +20,7 @@
   - get_the_category_list()
   - paginate_links()
   - the_time()
+- get_post_type_archive_link()
 - is_category()
 - is_author()
 - single_cat_title()
