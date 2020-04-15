@@ -4,7 +4,7 @@
 function university_post_types() {
 
 	register_post_type('program', array(
-		'supports' => array('title', 'editor', 'excerpt'),
+		'supports' => array('title', 'editor'),
 		'rewrite' => array('slug' => 'programs'),
 		'has_archive' => true,
 		'public' => true,
@@ -34,7 +34,7 @@ function university_post_types() {
 	));
 
 	register_post_type('professor', array(
-		'supports' => array('title', 'editor', 'excerpt'),
+		'supports' => array('title', 'editor', 'thumbnail'),
 		'public' => true,
 		'labels' => array(
 			'name' => 'Professors',
